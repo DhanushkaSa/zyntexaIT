@@ -1,0 +1,67 @@
+import React, { useEffect, useRef } from "react";
+import Plyr from "plyr-react";
+import "plyr-react/plyr.css";
+import imageAI from "../assets/videos/imageAI.mp4";
+import imageAiThumbnail from "../assets/thumb_1.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+const Projects = () => {
+
+    useEffect(() => {
+        AOS.init({ duration: 800, easing: "ease-in-out" });
+    }, []);
+
+    const playerRef1 = useRef(null);
+    const playerRef2 = useRef(null);
+
+    const handleMouseEnter = (ref) => {
+        const player = ref.current?.plyr;
+        player?.play();
+    };
+
+    const handleMouseLeave = (ref) => {
+        const player = ref.current?.plyr;
+        player?.pause();
+    };
+
+    return (
+        <div className="min-h-screen w-full bg-black px-4 py-16 flex flex-col items-center text-white">
+            <h1 className="text-3xl md:text-4xl font-semibold mb-10" data-aos="zoom-in">Our Projects</h1>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-6xl place-items-center" data-aos="zoom-in">
+
+                {/* Card 01 */}
+                <div className="flex flex-col items-center gap-4 w-full max-w-[420px]">
+                    <div
+                        className="w-full aspect-video rounded-xl overflow-hidden shadow-xl border border-white/20 cursor-pointer transition hover:scale-[1.02]"
+                        onMouseEnter={() => handleMouseEnter(playerRef1)}
+                        onMouseLeave={() => handleMouseLeave(playerRef1)}
+                    >
+                        <Plyr
+                            ref={playerRef1}
+                            source={{
+                                type: "video",
+                                poster: imageAiThumbnail,
+                                sources: [{ src: imageAI, type: "video/mp4" }],
+                            }}
+                            options={{ muted: true, controls: [] }}
+                        />
+                    </div>
+
+                    <div className="w-full bg-white/5 border border-white/10 backdrop-blur-md p-4 rounded-xl text-sm md:text-base leading-relaxed shadow-lg">
+                        <h2 className="text-lg font-semibold mb-1">AI Image Generator</h2>
+                        <p className="text-white/70">
+                            Type what you imagine — and the AI creates the image for you. Designed to help in design, branding, and creative artwork.
+                        </p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    );
+};
+
+export default Projects;

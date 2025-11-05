@@ -15,7 +15,7 @@ const Submitform = () => {
     const email = details.querySelector("input[name='Email']").value.trim();
     const message = details.querySelector("textarea[name='Message']").value.trim();
 
-    
+
     if (!name || !phone || !email || !message) {
       toast.error("Please fill in all fields before submitting");
       return;
@@ -115,7 +115,7 @@ const Submitform = () => {
         </div>
 
         <div className="flex flex-col gap-2">
-          <label className="text-gray-700 font-medium flex items-center gap-2"><FaMessage/>Message</label>
+          <label className="text-gray-700 font-medium flex items-center gap-2"><FaMessage />Message</label>
           <textarea
             name="Message"
             placeholder="Write your message..."

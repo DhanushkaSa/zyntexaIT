@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { SparklesCore } from "./ui/sparkles";
-import Navbar from "./Navbar";
 import LiquidEther from "./Background";
 import { MdWeb } from "react-icons/md";
 import { BiSolidBadgeCheck } from "react-icons/bi";
@@ -23,9 +22,7 @@ export function Base() {
 
   return (
     <>
-      <div className="z-50 fixed w-full ">
-        <Navbar />
-      </div>
+
 
       <div className="min-h-screen w-full bg-black flex flex-col items-center pt-30 px-4">
         <h1 className=" text-center relative z-20" data-aos="fade-down" data-aos-delay="100">

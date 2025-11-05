@@ -5,9 +5,11 @@ import { FaRegUser } from "react-icons/fa6";
 import { LuMail } from "react-icons/lu";
 import { useState } from "react";
 import { IoMenu, IoClose } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
   const navItems = [
     { name: "Home", link: "#" },
     { name: "Services", link: "#services" },
@@ -17,7 +19,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="flex items-center border  max-md:w-full max-md:justify-between border-slate-700 px-6 py-1  text-white text-[16px] relative bg-black/40 backdrop-blur-md">
+    <nav className="flex items-center border  max-md:w-full max-md:justify-between border-slate-700 px-6 py-1  text-white text-[16px]  bg-black/40 backdrop-blur-md z-50 fixed w-full">
       {/* Logo */}
       <div className="ml-2 sm:ml-3 w-40  p-1 ">
         <img
@@ -43,7 +45,7 @@ const Navbar = () => {
       {/* Desktop Buttons */}
       <div className="hidden ml-72 md:flex items-center">
 
-        <button className="bg-white hover:shadow-[0px_0px_30px_14px] shadow-[0px_0px_30px_7px] hover:shadow-white/50 shadow-white/50 text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-slate-100 transition duration-300">
+        <button onClick={() => navigate("/projects")} className="bg-white hover:shadow-[0px_0px_30px_14px] shadow-[0px_0px_30px_7px] hover:shadow-white/50 shadow-white/50 text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-slate-100 transition duration-300 hover:cursor-pointer">
           Our Projects
         </button>
       </div>
@@ -76,8 +78,8 @@ const Navbar = () => {
             {item.name}
           </a>
         ))}
-      
-        <button className="bg-white hover:shadow-[0px_0px_30px_14px] shadow-[0px_0px_30px_7px] hover:shadow-white/50 shadow-white/50 text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-slate-100 transition duration-300">
+
+        <button onClick={() => navigate("/projects")} className="bg-white hover:shadow-[0px_0px_30px_14px] shadow-[0px_0px_30px_7px] hover:shadow-white/50 shadow-white/50 text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-slate-100 transition duration-300">
           Our Projects
         </button>
       </div>
