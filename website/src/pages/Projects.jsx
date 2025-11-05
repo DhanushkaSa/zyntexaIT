@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import Plyr from "plyr-react";
 import "plyr-react/plyr.css";
-import imageAI from "../assets/videos/imageAI.mp4";
 import imageAiThumbnail from "../assets/thumb_1.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { FaGithub } from "react-icons/fa";
 
 const Projects = () => {
 
@@ -12,18 +12,7 @@ const Projects = () => {
         AOS.init({ duration: 800, easing: "ease-in-out" });
     }, []);
 
-    const playerRef1 = useRef(null);
-    const playerRef2 = useRef(null);
 
-    const handleMouseEnter = (ref) => {
-        const player = ref.current?.plyr;
-        player?.play();
-    };
-
-    const handleMouseLeave = (ref) => {
-        const player = ref.current?.plyr;
-        player?.pause();
-    };
 
     return (
         <div className="min-h-screen w-full bg-black px-4 py-16 flex flex-col items-center text-white">
@@ -35,18 +24,10 @@ const Projects = () => {
                 <div className="flex flex-col items-center gap-4 w-full max-w-[420px]">
                     <div
                         className="w-full aspect-video rounded-xl overflow-hidden shadow-xl border border-white/20 cursor-pointer transition hover:scale-[1.02]"
-                        onMouseEnter={() => handleMouseEnter(playerRef1)}
-                        onMouseLeave={() => handleMouseLeave(playerRef1)}
+
                     >
-                        <Plyr
-                            ref={playerRef1}
-                            source={{
-                                type: "video",
-                                poster: imageAiThumbnail,
-                                sources: [{ src: imageAI, type: "video/mp4" }],
-                            }}
-                            options={{ muted: true, controls: [] }}
-                        />
+                        <img src={imageAiThumbnail} alt="ImageAI" />
+
                     </div>
 
                     <div className="w-full bg-white/5 border border-white/10 backdrop-blur-md p-4 rounded-xl text-sm md:text-base leading-relaxed shadow-lg">
@@ -54,6 +35,17 @@ const Projects = () => {
                         <p className="text-white/70">
                             Type what you imagine — and the AI creates the image for you. Designed to help in design, branding, and creative artwork.
                         </p>
+                        <div className="space-y-2">
+                            <p className="font-semibold">Source code</p>
+
+                            <a href="https://github.com/DhanushkaSa/image-AI" target="_blank" className="flex items-center gap-2 text-cyan-400 hover:underline">
+                                <FaGithub /> Image AI Frontend
+                            </a>
+
+                            <a href="https://github.com/DhanushkaSa/backend-image-AI" target="_blank" className="flex items-center gap-2 text-cyan-400 hover:underline">
+                                <FaGithub /> Image AI Backend
+                            </a>
+                        </div>
                     </div>
                 </div>
 
