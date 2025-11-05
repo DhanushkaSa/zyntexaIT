@@ -6,25 +6,24 @@ export default function Footer() {
     <footer className="px-6 md:px-16 lg:px-24 xl:px-32 pt-8 w-full  bg-black/40 backdrop-blur-lg text-white">
       <div className="flex flex-col md:flex-row justify-between w-full gap-10 border-b border-gray-500/30 pb-6">
         <div className="md:max-w-96 flex flex-col ">
-          <img
-            src="/images/mainlogo.jpg"
-            className="w-[100px]  lg:w-[200px] rounded-xl"
-          ></img>
+          <a href="#">
+            <img
+              src="/images/mainlogo.jpg"
+              className="w-[100px]  lg:w-[200px] rounded-xl"
+            ></img></a>
 
           <div>
-            <div className="w-full md:w-1/3  pl-20 p-3 flex flex-col items-center">
+            <div className="w-full md:w-1/3  pl-3 p-3 flex flex-col ">
               <ul className="flex gap-4 pt-3">
                 <li>
                   <LuFacebook className="text-2xl cursor-pointer hover:text-cyan-400 transition duration-500" />
                 </li>
                 <li>
-                  <LuTwitter className="text-2xl cursor-pointer  hover:text-cyan-400 transition duration-500" />
-                </li>
-                <li>
                   <FaInstagram className="text-2xl cursor-pointer  hover:text-cyan-400 transition duration-500" />
                 </li>
                 <li>
-                  <FaLinkedinIn className="text-2xl cursor-pointer  hover:text-cyan-400 transition duration-500" />
+                  <a href="https://www.linkedin.com/company/zyntexait/about/" target="_blank"><FaLinkedinIn className="text-2xl cursor-pointer  hover:text-cyan-400 transition duration-500" /></a>
+
                 </li>
               </ul>
             </div>
@@ -34,31 +33,31 @@ export default function Footer() {
           <div>
             <h2 className="font-semibold mb-5 text-cyan-400">Company</h2>
             <ul className="text-sm space-y-2">
-              <li>
+              <li className="hover:text-cyan-200">
                 <a href="#">Home</a>
               </li>
-              <li>
-                <a href="#">About us</a>
+              <li className="hover:text-cyan-200">
+                <a href="#about">About us</a>
               </li>
-              <li>
-                <a href="#">Contact us</a>
+              <li className="hover:text-cyan-200">
+                <a href="#contact">Contact us</a>
               </li>
-              <li>
-                <a href="#">Privacy policy</a>
-              </li>
+
             </ul>
           </div>
           <div>
             <h2 className="font-semibold mb-5 text-cyan-400">Get in touch</h2>
             <div className="text-sm space-y-2">
-              <p>078-5999845</p>
-              <p>info@zyntexait.com</p>
+              <p>+94 78 599 9845</p>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@zyntexait.com" className="hover:text-cyan-200" target="_blank">
+                info@zyntexait.com
+              </a>
             </div>
           </div>
         </div>
       </div>
       <p className="pt-4 text-center text-xs md:text-sm pb-5">
-        Copyright 2025 © <a href="https://prebuiltui.com">ZyntexaIT</a>. All
+        Copyright 2025 © <a href="#" className="text-cyan-400">ZyntexaIT</a>. All
         Right Reserved.
       </p>
     </footer>

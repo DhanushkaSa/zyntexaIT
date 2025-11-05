@@ -10,7 +10,17 @@ import { RiTeamFill } from "react-icons/ri";
 import Footer from "./Footer";
 import RotatingText from "./RotatingText";
 import Submitform from "./Submitform";
+import logo from "../assets/short logo.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 export function Base() {
+
+  useEffect(() => {
+    AOS.init({ duration: 800, easing: "ease-in-out" });
+  }, []);
+
   return (
     <>
       <div className="z-50 fixed w-full ">
@@ -18,7 +28,7 @@ export function Base() {
       </div>
 
       <div className="min-h-screen w-full bg-black flex flex-col items-center pt-30 px-4">
-        <h1 className="font-bold text-center relative z-20">
+        <h1 className=" text-center relative z-20" data-aos="fade-down" data-aos-delay="100">
           <span className="text-3xl md:text-6xl lg:text-7xl bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
             Welcome to ZyntexaIT
           </span>
@@ -27,7 +37,7 @@ export function Base() {
             Driving Digital Evolution
           </span>
         </h1>
-        <p className="pt-3 text-gray-400 font-semibold text-center text-sm md:text-lg w-full md:w-3/4 lg:w-1/2">
+        <p className="pt-3 text-gray-400  text-center text-sm md:text-lg w-full md:w-3/4 lg:w-1/2" >
           ZyntexaIT is an AI-driven web development agency that crafts sleek
           websites, powerful software, and smart automation solutions to fuel
           business growth with innovation and precision.
@@ -48,25 +58,18 @@ export function Base() {
             particleColor="#FFFFFF"
           />
 
-          <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(250px_150px_at_top,transparent_20%,white)]"></div>
+          <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(250px_150px_at_top,transparent_20%,white)]" id="services"></div>
         </div>
 
-        <div className="mt-6 flex flex-col md:flex-row gap-4">
-          <button className="text-black font-semibold w-40 h-10 bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 rounded-2xl cursor-pointer hover:shadow-[0px_0px_32px_1px] shadow-blue-300">
-            Get our Service &#45;&#62;
-          </button>
-          <button className="text-white w-40 h-10 rounded-2xl border-2 border-cyan-400 cursor-pointer hover:shadow-[0px_0px_32px_1px] shadow-blue-300">
-            See our Project
-          </button>
-        </div>
+
         <div className="mt-30 flex flex-col items-center">
           <h1 className="text-cyan-300 text-xl sm:text-2xl lg:text-3xl font-bold">
             Our Services
           </h1>
         </div>
         <div className="flex flex-col md:flex-row flex-wrap justify-center gap-6 w-full md:w-5/6 mt-10">
-          <div className="w-full md:w-[30%] rounded-2xl bg-gray-950 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-103 hover:bg-green-950 p-4">
-            <div className="flex flex-col items-center">
+          <div className="w-full md:w-[30%] rounded-2xl bg-gray-950 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-103 hover:bg-green-950 p-4" data-aos="fade-left">
+            <div className="flex flex-col items-center" >
               <MdWeb className="text-green-300 text-5xl" />
               <h1 className="text-white font-bold text-lg text-center mt-2">
                 Web Application Development
@@ -84,7 +87,7 @@ export function Base() {
               <li>FullStack Expertise</li>
             </ul>
           </div>
-          <div className="w-full md:w-[30%] rounded-2xl shadow-cyan-300 bg-gray-950 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-103 hover:bg-orange-950 p-4">
+          <div className="w-full md:w-[30%] rounded-2xl shadow-cyan-300 bg-gray-950 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-103 hover:bg-orange-950 p-4" data-aos="fade-up">
             <div className="flex flex-col items-center">
               <BiSolidBadgeCheck className="text-orange-300 text-5xl" />
               <h1 className="text-white font-bold text-lg text-center mt-2">
@@ -103,7 +106,7 @@ export function Base() {
               <li>Optimized Security Practices</li>
             </ul>
           </div>
-          <div className="w-full md:w-[30%] rounded-2xl bg-gray-950 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-103 hover:bg-pink-950 p-4">
+          <div className="w-full md:w-[30%] rounded-2xl bg-gray-950 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-103 hover:bg-pink-950 p-4" data-aos="fade-right">
             <div className="flex flex-col items-center">
               <MdOutlineWbSunny className="text-pink-300 text-5xl" />
               <h1 className="text-white font-bold text-lg text-center mt-2">
@@ -116,7 +119,7 @@ export function Base() {
               bug fixing, and feature updates to keep your application running
               smoothly.
             </p>
-            <ul className="text-white list-disc marker:text-cyan-400 pl-5 pt-3">
+            <ul className="text-white list-disc marker:text-cyan-400 pl-5 pt-3" id="team">
               <li>Clean & Modern User Interface</li>
               <li>Post-Launch Maintenance & Support</li>
               <li>Version Control with Git</li>
@@ -124,7 +127,7 @@ export function Base() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center">
+        <div className="mt-12 flex flex-col items-center" >
           <RiTeamFill className="text-cyan-400  text-3xl sm:text-4xl lg:text-5xl" />
           <h1 className="text-cyan-400 text-xl sm:text-2xl lg:text-3xl font-bold">
             About Our Team
@@ -132,7 +135,7 @@ export function Base() {
         </div>
 
         <div className="flex flex-col md:flex-row flex-wrap justify-center gap-8 w-full md:w-5/6 mt-20 mb-20">
-          <div className="w-full md:w-[30%] shadow-[0px_0px_20px_1px] shadow-cyan-600  rounded-2xl bg-gray-950 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-103  p-4">
+          <div className="w-full md:w-[30%] shadow-[0px_0px_20px_1px] shadow-cyan-900  rounded-2xl bg-gray-950 transition delay-150 duration-300 ease-in-out p-4" data-aos="flip-left">
             <div className="flex flex-col items-center">
               <img
                 className="w-4/5 h-4/5 border-4 border-blue-950 rounded-full"
@@ -148,7 +151,7 @@ export function Base() {
               </div>
             </div>
           </div>
-          <div className="w-full md:w-[30%] shadow-[0px_0px_20px_1px] shadow-cyan-600 rounded-2xl bg-gray-950 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-103  p-4">
+          <div className="w-full md:w-[30%] shadow-[0px_0px_20px_1px] shadow-cyan-900 rounded-2xl bg-gray-950 transition delay-150 duration-300 ease-in-out p-4" data-aos="flip-left">
             <div className="flex flex-col items-center">
               <img
                 className="w-4/5 h-4/5 border-4 border-blue-950 rounded-full"
@@ -164,7 +167,7 @@ export function Base() {
               </div>
             </div>
           </div>
-          <div className="w-full md:w-[30%] shadow-[0px_0px_20px_1px] shadow-cyan-600 rounded-2xl bg-gray-950 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-103 p-4">
+          <div className="w-full md:w-[30%] shadow-[0px_0px_20px_1px] shadow-cyan-900 rounded-2xl bg-gray-950 transition delay-150 duration-300 ease-in-out  p-4" data-aos="flip-left">
             <div className="flex flex-col items-center">
               <img
                 className="w-4/5 h-4/5 border-4 border-blue-950 rounded-full"
@@ -174,16 +177,16 @@ export function Base() {
                 <h1 className="font-semibold text-white text-lg">
                   Shashin Deemantha
                 </h1>
-                <h1 className="font-semibold text-cyan-400 text-sm">
+                <h1 className="font-semibold text-cyan-400 text-sm" id="about">
                   Marketing & Designer
                 </h1>
               </div>
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row w-full p-4 gap-4">
+        <div className="flex flex-col md:flex-row w-full p-4 gap-4" >
           {/* Left Column */}
-          <div className="flex-1 p-3 rounded-2xl bg-gray-900 transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:scale-103">
+          <div className="flex-1 p-5 rounded-2xl bg-gray-900 transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:scale-103" data-aos="zoom-in">
             <h1 className="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent text-xl md:text-3xl lg:text-4xl font-bold">
               About ZyntexaIT
             </h1>
@@ -194,13 +197,11 @@ export function Base() {
               software engineering, and smart automation designed to enhance
               operational efficiency and drive sustainable growth.
             </p>
-            <button className="text-black font-semibold w-40 h-10 bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 rounded-xl cursor-pointer">
-              Learn More
-            </button>
+
           </div>
 
           {/* Right Column */}
-          <div className="flex-1 flex flex-col gap-2 rounded-2xl p-3 bg-gray-900">
+          <div className="flex-1 flex flex-col gap-2 rounded-2xl p-3 bg-gray-900" data-aos="zoom-in">
             <div className="flex-1 rounded-2xl bg-gray-800 w-full text-gray-200 p-4 transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:scale-103">
               <h1 className="font-bold">Innovation Focused</h1>
               <span className="text-sm text-gray-300">
@@ -218,21 +219,27 @@ export function Base() {
             </div>
             <div className="flex-1 rounded-2xl bg-gray-800 w-full text-gray-200 p-4 transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:scale-103">
               <h1 className="font-bold">Quality & Precision</h1>
-              <span className="text-xs text-gray-300">
+              <span className="text-xs text-gray-300" id="contact">
                 Highest standards of technical excellence and project delivery,
                 ensuring reliability, scalability, and lasting impact.
               </span>
             </div>
           </div>
         </div>
-        <div className="bg-gray-900 w-full flex justify-center p-10 m-4 rounded-2xl">
+        <div className="bg-gray-900 w-full flex justify-center p-10 m-4 rounded-2xl" data-aos="zoom-in-up">
           <form className="flex:col lg:flex items-center text-sm text-white gap-60">
             <div className="flex flex-col">
               <div>
+
+
+                <div className="flex justify-center">
+                  <img src={logo} alt="logo" className="w-20 h-20 rounded-full" />
+                </div>
+
                 <h1 className="text-4xl font-bold py-4 text-center">
                   <RotatingText
                     texts={["ZyntexaIT", "Driving", "Digital", "Evolution"]}
-                    mainClassName="px-2 sm:px-2 md:px-3  text-cyan-400 overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+                    mainClassName="px-2 sm:px-2 md:px-3 text-cyan-400 overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
                     staggerFrom={"last"}
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
@@ -245,10 +252,11 @@ export function Base() {
                   Let’s Get In Touch.
                 </h1>
               </div>
+
               <div>
                 <p className="max-md:text-sm text-gray-500 pb-10 text-center">
                   Or just reach out manually to us at{" "}
-                  <a href="#" className="text-indigo-600 hover:underline">
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@zyntexait.com" className="text-indigo-600">
                     info@zyntexait.com
                   </a>
                 </p>
@@ -260,6 +268,7 @@ export function Base() {
             </div>
           </form>
         </div>
+
       </div>
 
       <div className="w-full h-[500px] relative">

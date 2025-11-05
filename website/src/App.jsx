@@ -1,12 +1,15 @@
 import "./App.css";
-import { Base } from "./components/base";
+import { Base } from "./components/Base";
 import Navbar from "./components/Navbar";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
     <>
+      <ToastContainer position="top-center" autoClose={3000}/>
       <Base />
-      {/* <Navbar/> */}
+      
     </>
   );
 }
