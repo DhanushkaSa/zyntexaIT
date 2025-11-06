@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaGithub } from "react-icons/fa";
 
-const Projects = () => {
+export default function Projects() {
 
     useEffect(() => {
         AOS.init({
@@ -59,4 +59,4 @@ const Projects = () => {
     );
 };
 
-export default Projects;
+;

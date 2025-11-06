@@ -4,7 +4,7 @@ import { Base } from "./components/Base";
 import Navbar from "./components/Navbar";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Projects from "./pages/projects.jsx";
+import Projects from "./pages/Projects"
 
 function App() {
   const location = useLocation();
