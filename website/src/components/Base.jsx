@@ -17,7 +17,10 @@ import { useEffect } from "react";
 export function Base() {
 
   useEffect(() => {
-    AOS.init({ duration: 800, easing: "ease-in-out" });
+    AOS.init({
+      duration: 800, easing: "ease-in-out", once: true,
+      mirror: false,
+    });
   }, []);
 
   return (
