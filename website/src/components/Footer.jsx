@@ -48,7 +48,7 @@ export default function Footer() {
           <div>
             <h2 className="font-semibold mb-5 text-cyan-400">Get in touch</h2>
             <div className="text-sm space-y-2">
-              <p>+94 78 599 9845</p>
+              <p>+94 76 108 8405</p>
               <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@zyntexait.com" className="hover:text-cyan-200" target="_blank">
                 info@zyntexait.com
               </a>
