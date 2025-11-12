@@ -1,5 +1,5 @@
 import { LuFacebook, LuTwitter } from "react-icons/lu";
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaTiktok } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 export default function Footer() {
   return (
@@ -16,14 +16,17 @@ export default function Footer() {
             <div className="w-full md:w-1/3  pl-3 p-3 flex flex-col ">
               <ul className="flex gap-4 pt-3">
                 <li>
-                  <LuFacebook className="text-2xl cursor-pointer hover:text-cyan-400 transition duration-500" />
+                  <a href="" target="_blank"><LuFacebook className="text-2xl cursor-pointer hover:text-cyan-400 transition duration-500" /></a>
                 </li>
                 <li>
-                  <FaInstagram className="text-2xl cursor-pointer  hover:text-cyan-400 transition duration-500" />
+                  <a href="https://www.instagram.com/zyntexait?igsh=MXNtdmR0ZmNsdjdsYg%3D%3D&utm_source=qr" target="_blank"><FaInstagram className="text-2xl cursor-pointer  hover:text-cyan-400 transition duration-500" /></a>
                 </li>
                 <li>
                   <a href="https://www.linkedin.com/company/zyntexait/about/" target="_blank"><FaLinkedinIn className="text-2xl cursor-pointer  hover:text-cyan-400 transition duration-500" /></a>
 
+                </li>
+                <li>
+                  <a href="https://www.tiktok.com/@zyntexait?_r=1&_t=ZS-91GR5DWecIp" target="_blank"><FaTiktok className="text-2xl cursor-pointer  hover:text-cyan-400 transition duration-500"></FaTiktok></a>
                 </li>
               </ul>
             </div>
