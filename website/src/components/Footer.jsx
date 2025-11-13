@@ -16,7 +16,7 @@ export default function Footer() {
             <div className="w-full md:w-1/3  pl-3 p-3 flex flex-col ">
               <ul className="flex gap-4 pt-3">
                 <li>
-                  <a href="" target="_blank"><LuFacebook className="text-2xl cursor-pointer hover:text-cyan-400 transition duration-500" /></a>
+                  <a href="https://www.facebook.com/share/1A7YpngKka/" target="_blank"><LuFacebook className="text-2xl cursor-pointer hover:text-cyan-400 transition duration-500" /></a>
                 </li>
                 <li>
                   <a href="https://www.instagram.com/zyntexait?igsh=MXNtdmR0ZmNsdjdsYg%3D%3D&utm_source=qr" target="_blank"><FaInstagram className="text-2xl cursor-pointer  hover:text-cyan-400 transition duration-500" /></a>
