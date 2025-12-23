@@ -5,7 +5,7 @@ import imageAiThumbnail from "../assets/thumb_1.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaGithub } from "react-icons/fa";
-import goviMart from "../assets/govimart.png";
+import goviMart from "../assets/GoviMart.png";
 
 export default function Projects() {
 
